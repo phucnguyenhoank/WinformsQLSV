@@ -1,0 +1,14 @@
+E:\HelloCSharp\Day2_Again\StudentManager\StudentManager\bin\Debug\StudentManager.exe.config
+E:\HelloCSharp\Day2_Again\StudentManager\StudentManager\bin\Debug\StudentManager.exe
+E:\HelloCSharp\Day2_Again\StudentManager\StudentManager\bin\Debug\StudentManager.pdb
+E:\HelloCSharp\Day2_Again\StudentManager\StudentManager\obj\Debug\StudentManager.csproj.AssemblyReference.cache
+E:\HelloCSharp\Day2_Again\StudentManager\StudentManager\obj\Debug\StudentManager.frmLogin.resources
+E:\HelloCSharp\Day2_Again\StudentManager\StudentManager\obj\Debug\StudentManager.Properties.Resources.resources
+E:\HelloCSharp\Day2_Again\StudentManager\StudentManager\obj\Debug\StudentManager.csproj.GenerateResource.cache
+E:\HelloCSharp\Day2_Again\StudentManager\StudentManager\obj\Debug\StudentManager.csproj.CoreCompileInputs.cache
+E:\HelloCSharp\Day2_Again\StudentManager\StudentManager\obj\Debug\StudentManager.exe
+E:\HelloCSharp\Day2_Again\StudentManager\StudentManager\obj\Debug\StudentManager.pdb
+E:\HelloCSharp\Day2_Again\StudentManager\StudentManager\obj\Debug\StudentManager.frmRegister.resources
+E:\HelloCSharp\Day2_Again\StudentManager\StudentManager\bin\Debug\BCrypt.Net.dll
+E:\HelloCSharp\Day2_Again\StudentManager\StudentManager\bin\Debug\BCrypt.Net.xml
+E:\HelloCSharp\Day2_Again\StudentManager\StudentManager\obj\Debug\StudentManager.csproj.CopyComplete
