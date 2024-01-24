@@ -12,3 +12,5 @@ E:\HelloCSharp\Day2_Again\StudentManager\StudentManager\obj\Debug\StudentManager
 E:\HelloCSharp\Day2_Again\StudentManager\StudentManager\bin\Debug\BCrypt.Net.dll
 E:\HelloCSharp\Day2_Again\StudentManager\StudentManager\bin\Debug\BCrypt.Net.xml
 E:\HelloCSharp\Day2_Again\StudentManager\StudentManager\obj\Debug\StudentManager.csproj.CopyComplete
+E:\HelloCSharp\Day2_Again\StudentManager\StudentManager\obj\Debug\StudentManager.frmAddStudent.resources
+E:\HelloCSharp\Day2_Again\StudentManager\StudentManager\obj\Debug\StudentManager.frmFunctionSelector.resources

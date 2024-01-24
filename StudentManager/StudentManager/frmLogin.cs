@@ -19,7 +19,7 @@ namespace StudentManager
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
@@ -37,7 +37,8 @@ namespace StudentManager
             {
                 lblNoticeLogin.Text = "Login successfully";
                 lblNoticeLogin.ForeColor = Color.Green;
-                MessageBox.Show("Successfully login");
+                MessageBox.Show("Successfully login"); // dòng này có thể xóa
+                DialogResult = DialogResult.OK;
 
             }
             else

@@ -16,7 +16,21 @@ namespace StudentManager
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLogin());
+
+            Application.Run(new frmAddStudent());
+
+            /*
+
+            frmLogin loginForm = new frmLogin();
+            if (loginForm.ShowDialog() == DialogResult.OK)
+            { 
+                Application.Run(new frmFunctionSelector()); 
+            }
+            else
+            { 
+                Application.Exit();
+            }
+            */
         }
     }
 }
