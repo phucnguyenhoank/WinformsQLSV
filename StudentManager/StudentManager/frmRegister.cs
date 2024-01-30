@@ -38,7 +38,7 @@ namespace StudentManager
                 return;
             }
 
-            ManagerStudentDatabase managerStudentDatabase = new ManagerStudentDatabase();
+            StudentDatabaseManager managerStudentDatabase = new StudentDatabaseManager();
 
             if (managerStudentDatabase.HaveUsernameInTheDB(txtNewUsername.Text))
             {

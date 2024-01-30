@@ -22,5 +22,11 @@ namespace StudentManager
             frmAddStudent addStudentForm = new frmAddStudent();
             addStudentForm.ShowDialog(this);
         }
+
+        private void studentListToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmStudentList studentListForm = new frmStudentList();
+            studentListForm.ShowDialog(this);
+        }
     }
 }

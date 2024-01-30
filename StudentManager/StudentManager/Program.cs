@@ -17,10 +17,12 @@ namespace StudentManager
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new frmAddStudent());
+            // Application.Run(new frmAddStudent());
 
-            /*
+            // Application.Run(new frmStudentList());
 
+            
+            
             frmLogin loginForm = new frmLogin();
             if (loginForm.ShowDialog() == DialogResult.OK)
             { 
@@ -30,7 +32,9 @@ namespace StudentManager
             { 
                 Application.Exit();
             }
-            */
+            
+            
+            
         }
     }
 }

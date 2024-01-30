@@ -63,9 +63,29 @@ namespace StudentManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap isnot_male_icon {
+            get {
+                object obj = ResourceManager.GetObject("isnot_male_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap LOGO_UTE {
             get {
                 object obj = ResourceManager.GetObject("LOGO_UTE", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tick_icon {
+            get {
+                object obj = ResourceManager.GetObject("tick_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

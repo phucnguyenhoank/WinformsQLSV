@@ -39,7 +39,7 @@ namespace StudentManager
             string firstStudentName = txtStudentFirstName.Text;
             string lastStudentName = txtStudentLastName.Text;
             string phoneNumber = txtStudentPhoneNumber.Text;
-            DateTime studentBirthday = dtpStudentBirthday.Value;
+            DateTime studentBirthday = dtpStudentBirthday.Value.Date;
             string gender = (radioBtnStudentGender.Checked) ? "Male" : "Female";
             string address = txtStudentAddress.Text;
 
@@ -49,7 +49,7 @@ namespace StudentManager
 
             Student addedStudent = new Student(studentID, firstStudentName, lastStudentName, phoneNumber, studentBirthday, gender, address, studentImageData);
 
-            ManagerStudentDatabase managerStudentDatabase = new ManagerStudentDatabase();
+            StudentDatabaseManager managerStudentDatabase = new StudentDatabaseManager();
             if (managerStudentDatabase.AddStudent(addedStudent))
             {
                 MessageBox.Show("Add Student successfully");
@@ -60,6 +60,11 @@ namespace StudentManager
             }
 
 
+
+        }
+
+        private void picboxStudentImage_Click(object sender, EventArgs e)
+        {
 
         }
     }

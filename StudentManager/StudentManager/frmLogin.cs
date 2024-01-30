@@ -31,7 +31,7 @@ namespace StudentManager
         private void btnLogin_Click(object sender, EventArgs e)
         {
             
-            ManagerStudentDatabase managerStudentDatabase = new ManagerStudentDatabase();
+            StudentDatabaseManager managerStudentDatabase = new StudentDatabaseManager();
             bool okLogin = managerStudentDatabase.HaveAccount(txtUsername.Text, txtPassword.Text);
             if (okLogin)
             {
