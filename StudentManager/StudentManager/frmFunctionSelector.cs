@@ -28,5 +28,33 @@ namespace StudentManager
             frmStudentList studentListForm = new frmStudentList();
             studentListForm.ShowDialog(this);
         }
+
+        private void frmFunctionSelector_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void birthMonthToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmStatis frmSta = new frmStatis();
+            frmSta.ShowDialog(this);
+        }
+
+        private void adminToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                BLL.AccountBLL accountBLL = new BLL.AccountBLL();
+                frmAccountList accountList = new frmAccountList(accountBLL.GetAccountList());
+                accountList.ShowDialog(this);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"adminToolStripMenuItem_Click:{ex.Message}");
+            }
+            
+
+        }
     }
 }

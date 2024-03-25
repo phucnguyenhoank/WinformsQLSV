@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblNoticeLogin = new System.Windows.Forms.Label();
             this.btnAddStudent = new System.Windows.Forms.Button();
             this.btnCancelAddStudent = new System.Windows.Forms.Button();
@@ -46,12 +47,16 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.btnUploadStudentPicture = new System.Windows.Forms.Button();
-            this.radioBtnStudentGender = new System.Windows.Forms.RadioButton();
             this.picboxStudentImage = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.radioBtnAddStudentGenderFemale = new System.Windows.Forms.RadioButton();
+            this.errorProviderUserInput = new System.Windows.Forms.ErrorProvider(this.components);
+            this.grboxGender = new System.Windows.Forms.GroupBox();
+            this.rbtnAddStudentGenderFemale = new System.Windows.Forms.RadioButton();
+            this.rbtnAddStudentGenderMale = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.picboxStudentImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderUserInput)).BeginInit();
+            this.grboxGender.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblNoticeLogin
@@ -101,6 +106,7 @@
             this.txtStudentFirstName.Name = "txtStudentFirstName";
             this.txtStudentFirstName.Size = new System.Drawing.Size(377, 36);
             this.txtStudentFirstName.TabIndex = 1;
+            this.txtStudentFirstName.TextChanged += new System.EventHandler(this.txtStudentFirstName_TextChanged);
             // 
             // label3
             // 
@@ -150,6 +156,7 @@
             this.txtStudentLastName.Name = "txtStudentLastName";
             this.txtStudentLastName.Size = new System.Drawing.Size(377, 36);
             this.txtStudentLastName.TabIndex = 2;
+            this.txtStudentLastName.TextChanged += new System.EventHandler(this.txtStudentLastName_TextChanged);
             // 
             // lblStudentLastname
             // 
@@ -169,6 +176,7 @@
             this.txtStudentPhoneNumber.Name = "txtStudentPhoneNumber";
             this.txtStudentPhoneNumber.Size = new System.Drawing.Size(377, 36);
             this.txtStudentPhoneNumber.TabIndex = 3;
+            this.txtStudentPhoneNumber.TextChanged += new System.EventHandler(this.txtStudentPhoneNumber_TextChanged);
             // 
             // label6
             // 
@@ -247,18 +255,6 @@
             this.btnUploadStudentPicture.UseVisualStyleBackColor = false;
             this.btnUploadStudentPicture.Click += new System.EventHandler(this.btnUploadStudentPicture_Click);
             // 
-            // radioBtnStudentGender
-            // 
-            this.radioBtnStudentGender.AutoSize = true;
-            this.radioBtnStudentGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioBtnStudentGender.Location = new System.Drawing.Point(478, 466);
-            this.radioBtnStudentGender.Name = "radioBtnStudentGender";
-            this.radioBtnStudentGender.Size = new System.Drawing.Size(66, 24);
-            this.radioBtnStudentGender.TabIndex = 31;
-            this.radioBtnStudentGender.TabStop = true;
-            this.radioBtnStudentGender.Text = "Male";
-            this.radioBtnStudentGender.UseVisualStyleBackColor = true;
-            // 
             // picboxStudentImage
             // 
             this.picboxStudentImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -280,17 +276,44 @@
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
-            // radioBtnAddStudentGenderFemale
+            // errorProviderUserInput
             // 
-            this.radioBtnAddStudentGenderFemale.AutoSize = true;
-            this.radioBtnAddStudentGenderFemale.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioBtnAddStudentGenderFemale.Location = new System.Drawing.Point(550, 466);
-            this.radioBtnAddStudentGenderFemale.Name = "radioBtnAddStudentGenderFemale";
-            this.radioBtnAddStudentGenderFemale.Size = new System.Drawing.Size(85, 24);
-            this.radioBtnAddStudentGenderFemale.TabIndex = 56;
-            this.radioBtnAddStudentGenderFemale.TabStop = true;
-            this.radioBtnAddStudentGenderFemale.Text = "Female";
-            this.radioBtnAddStudentGenderFemale.UseVisualStyleBackColor = true;
+            this.errorProviderUserInput.ContainerControl = this;
+            // 
+            // grboxGender
+            // 
+            this.grboxGender.Controls.Add(this.rbtnAddStudentGenderFemale);
+            this.grboxGender.Controls.Add(this.rbtnAddStudentGenderMale);
+            this.grboxGender.Location = new System.Drawing.Point(447, 454);
+            this.grboxGender.Name = "grboxGender";
+            this.grboxGender.Size = new System.Drawing.Size(194, 54);
+            this.grboxGender.TabIndex = 57;
+            this.grboxGender.TabStop = false;
+            this.grboxGender.Text = "Gender";
+            // 
+            // rbtnAddStudentGenderFemale
+            // 
+            this.rbtnAddStudentGenderFemale.AutoSize = true;
+            this.rbtnAddStudentGenderFemale.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnAddStudentGenderFemale.Location = new System.Drawing.Point(103, 24);
+            this.rbtnAddStudentGenderFemale.Name = "rbtnAddStudentGenderFemale";
+            this.rbtnAddStudentGenderFemale.Size = new System.Drawing.Size(85, 24);
+            this.rbtnAddStudentGenderFemale.TabIndex = 55;
+            this.rbtnAddStudentGenderFemale.TabStop = true;
+            this.rbtnAddStudentGenderFemale.Text = "Female";
+            this.rbtnAddStudentGenderFemale.UseVisualStyleBackColor = true;
+            // 
+            // rbtnAddStudentGenderMale
+            // 
+            this.rbtnAddStudentGenderMale.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.rbtnAddStudentGenderMale.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnAddStudentGenderMale.Location = new System.Drawing.Point(21, 24);
+            this.rbtnAddStudentGenderMale.Name = "rbtnAddStudentGenderMale";
+            this.rbtnAddStudentGenderMale.Size = new System.Drawing.Size(82, 24);
+            this.rbtnAddStudentGenderMale.TabIndex = 52;
+            this.rbtnAddStudentGenderMale.TabStop = true;
+            this.rbtnAddStudentGenderMale.Text = "Male";
+            this.rbtnAddStudentGenderMale.UseVisualStyleBackColor = true;
             // 
             // frmAddStudent
             // 
@@ -299,8 +322,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.CancelButton = this.btnCancelAddStudent;
             this.ClientSize = new System.Drawing.Size(1196, 753);
-            this.Controls.Add(this.radioBtnAddStudentGenderFemale);
-            this.Controls.Add(this.radioBtnStudentGender);
+            this.Controls.Add(this.grboxGender);
             this.Controls.Add(this.btnUploadStudentPicture);
             this.Controls.Add(this.picboxStudentImage);
             this.Controls.Add(this.label9);
@@ -326,8 +348,12 @@
             this.Name = "frmAddStudent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Student";
+            this.Load += new System.EventHandler(this.frmAddStudent_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picboxStudentImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderUserInput)).EndInit();
+            this.grboxGender.ResumeLayout(false);
+            this.grboxGender.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -355,7 +381,9 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox picboxStudentImage;
         private System.Windows.Forms.Button btnUploadStudentPicture;
-        private System.Windows.Forms.RadioButton radioBtnStudentGender;
-        private System.Windows.Forms.RadioButton radioBtnAddStudentGenderFemale;
+        private System.Windows.Forms.ErrorProvider errorProviderUserInput;
+        private System.Windows.Forms.GroupBox grboxGender;
+        private System.Windows.Forms.RadioButton rbtnAddStudentGenderFemale;
+        private System.Windows.Forms.RadioButton rbtnAddStudentGenderMale;
     }
 }

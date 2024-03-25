@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,7 +22,6 @@ namespace StudentManager
 
         }
 
-        
 
         private DataTable filteredData;
 
@@ -32,20 +32,29 @@ namespace StudentManager
         
         private void btnApplyFilter_Click(object sender, EventArgs e)
         {
-            string studentID = txtStudentIDFilter.Text;
-            string firstStudentName = txtStudentFirstNameFilter.Text;
-            string lastStudentName = txtStudentLastNameFilter.Text;
-            string phoneNumber = txtStudentPhoneNumberFilter.Text;
-            DateTime studentBirthday = dtpStudentBirthdayFilter.Value.Date;
-            string gender = (radioBtnStudentGenderFilter.Checked) ? "Male" : ((radioBtnBothGender.Checked)? "":"Female");
-            string address = txtStudentAddressFilter.Text;
+            try
+            {
 
-            StudentDatabaseManager studentDatabaseManager = new StudentDatabaseManager();
-            filteredData = studentDatabaseManager.GetStudentFilterResult(studentID, firstStudentName, lastStudentName, phoneNumber, studentBirthday, gender, address);
+                string studentID = txtStudentIDFilter.Text;
+                string firstStudentName = txtStudentFirstNameFilter.Text;
+                string lastStudentName = txtStudentLastNameFilter.Text;
+                string phoneNumber = txtStudentPhoneNumberFilter.Text;
+                DateTime studentBirthday = dtpStudentBirthdayFilter.Value.Date;
+                string gender = (radioBtnStudentGenderFilter.Checked) ? "Male" : ((radioBtnBothGender.Checked) ? "" : "Female");
+                string address = txtStudentAddressFilter.Text;
 
-            
-            DialogResult = DialogResult.OK;
-            Close();
+
+                StudentBLL studentBLL = new StudentBLL();
+                filteredData = studentBLL.GetStudentFilterResult(studentID, firstStudentName, lastStudentName, phoneNumber, studentBirthday, gender, address);
+
+                DialogResult = DialogResult.OK;
+                Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"btnApplyFilter_Click:{ex.Message}");
+            }
+
 
         }
 

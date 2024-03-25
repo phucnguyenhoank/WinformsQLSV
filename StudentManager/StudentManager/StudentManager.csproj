@@ -36,8 +36,13 @@
     <Reference Include="BCrypt.Net, Version=0.1.4141.31969, Culture=neutral, PublicKeyToken=f3bc8f8c31beeb49, processorArchitecture=MSIL">
       <HintPath>..\packages\BCrypt.Net.0.1.0\lib\net35\BCrypt.Net.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,6 +54,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EmailVerificationService.cs" />
+    <Compile Include="frmAccountList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAccountList.Designer.cs">
+      <DependentUpon>frmAccountList.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAddStudent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +72,12 @@
     </Compile>
     <Compile Include="frmEditStudent.Designer.cs">
       <DependentUpon>frmEditStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmForgetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmForgetPassword.Designer.cs">
+      <DependentUpon>frmForgetPassword.cs</DependentUpon>
     </Compile>
     <Compile Include="frmFunctionSelector.cs">
       <SubType>Form</SubType>
@@ -79,6 +97,18 @@
     <Compile Include="frmRegister.Designer.cs">
       <DependentUpon>frmRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmResetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmResetPassword.Designer.cs">
+      <DependentUpon>frmResetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStatis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStatis.Designer.cs">
+      <DependentUpon>frmStatis.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmStudentFilter.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,15 +121,25 @@
     <Compile Include="frmStudentList.Designer.cs">
       <DependentUpon>frmStudentList.cs</DependentUpon>
     </Compile>
-    <Compile Include="StudentDatabaseManager.cs" />
+    <Compile Include="frmWorkLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWorkLoading.Designer.cs">
+      <DependentUpon>frmWorkLoading.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Student.cs" />
+    <EmbeddedResource Include="frmAccountList.resx">
+      <DependentUpon>frmAccountList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAddStudent.resx">
       <DependentUpon>frmAddStudent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEditStudent.resx">
       <DependentUpon>frmEditStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmForgetPassword.resx">
+      <DependentUpon>frmForgetPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmFunctionSelector.resx">
       <DependentUpon>frmFunctionSelector.cs</DependentUpon>
@@ -110,11 +150,20 @@
     <EmbeddedResource Include="frmRegister.resx">
       <DependentUpon>frmRegister.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmResetPassword.resx">
+      <DependentUpon>frmResetPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStatis.resx">
+      <DependentUpon>frmStatis.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmStudentFilter.resx">
       <DependentUpon>frmStudentFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmStudentList.resx">
       <DependentUpon>frmStudentList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWorkLoading.resx">
+      <DependentUpon>frmWorkLoading.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -145,6 +194,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\isnot_male_icon.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{bdd413e4-461d-42fb-9f0f-6817fe8eb874}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{578fef3c-72ea-4157-807d-6c3061106959}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

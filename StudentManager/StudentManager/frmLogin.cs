@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,27 +25,54 @@ namespace StudentManager
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            frmRegister frmRegister = new frmRegister();
-            frmRegister.ShowDialog();
+            try
+            {
+                frmRegister frmRegister = new frmRegister();
+                frmRegister.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"[btnRegister_Click:{ex.Message}]");
+            }
+            
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            
-            StudentDatabaseManager managerStudentDatabase = new StudentDatabaseManager();
-            bool okLogin = managerStudentDatabase.HaveAccount(txtUsername.Text, txtPassword.Text);
-            if (okLogin)
+            try
             {
-                lblNoticeLogin.Text = "Login successfully";
-                lblNoticeLogin.ForeColor = Color.Green;
-                MessageBox.Show("Successfully login"); // dòng này có thể xóa
-                DialogResult = DialogResult.OK;
-
+                AccountBLL accountBLL = new AccountBLL();
+                bool okLogin = accountBLL.HaveAccount(txtUsername.Text, txtPassword.Text);
+                if (okLogin)
+                {
+                    lblNoticeLogin.Text = "Login successfully";
+                    lblNoticeLogin.ForeColor = Color.Green;
+                    // MessageBox.Show("Successfully login"); // dòng này có thể xóa
+                    DialogResult = DialogResult.OK;
+                }
+                else
+                {
+                    lblNoticeLogin.Text = "Invalid username or password";
+                    lblNoticeLogin.ForeColor = Color.Red;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                lblNoticeLogin.Text = "Invalid username or password";
-                lblNoticeLogin.ForeColor = Color.Red;
+                Console.WriteLine($"[btnLogin_Click:{ex.Message}]");
+            }
+
+        }
+
+        private void btnForgetPassword_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmForgetPassword frmFgPassword = new frmForgetPassword();
+                frmFgPassword.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"[btnForgetPassword_Click:{ex.Message}]");
             }
             
 

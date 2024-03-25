@@ -33,10 +33,16 @@
             this.studentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewStudentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.studentListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.staToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.birthMonthToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editRemoveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manageStudentFormToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.printToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.courseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.scoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.resultToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.adminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,7 +54,8 @@
             this.studentToolStripMenuItem,
             this.courseToolStripMenuItem,
             this.scoreToolStripMenuItem,
-            this.resultToolStripMenuItem});
+            this.resultToolStripMenuItem,
+            this.adminToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 31);
@@ -59,7 +66,11 @@
             // 
             this.studentToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addNewStudentToolStripMenuItem,
-            this.studentListToolStripMenuItem});
+            this.studentListToolStripMenuItem,
+            this.staToolStripMenuItem,
+            this.editRemoveToolStripMenuItem,
+            this.manageStudentFormToolStripMenuItem,
+            this.printToolStripMenuItem});
             this.studentToolStripMenuItem.Name = "studentToolStripMenuItem";
             this.studentToolStripMenuItem.Size = new System.Drawing.Size(100, 27);
             this.studentToolStripMenuItem.Text = "Student";
@@ -75,9 +86,43 @@
             // studentListToolStripMenuItem
             // 
             this.studentListToolStripMenuItem.Name = "studentListToolStripMenuItem";
+            this.studentListToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.L)));
             this.studentListToolStripMenuItem.Size = new System.Drawing.Size(330, 28);
             this.studentListToolStripMenuItem.Text = "Student list";
             this.studentListToolStripMenuItem.Click += new System.EventHandler(this.studentListToolStripMenuItem_Click);
+            // 
+            // staToolStripMenuItem
+            // 
+            this.staToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.birthMonthToolStripMenuItem});
+            this.staToolStripMenuItem.Name = "staToolStripMenuItem";
+            this.staToolStripMenuItem.Size = new System.Drawing.Size(330, 28);
+            this.staToolStripMenuItem.Text = "Statics";
+            // 
+            // birthMonthToolStripMenuItem
+            // 
+            this.birthMonthToolStripMenuItem.Name = "birthMonthToolStripMenuItem";
+            this.birthMonthToolStripMenuItem.Size = new System.Drawing.Size(201, 28);
+            this.birthMonthToolStripMenuItem.Text = "BirthMonth";
+            this.birthMonthToolStripMenuItem.Click += new System.EventHandler(this.birthMonthToolStripMenuItem_Click);
+            // 
+            // editRemoveToolStripMenuItem
+            // 
+            this.editRemoveToolStripMenuItem.Name = "editRemoveToolStripMenuItem";
+            this.editRemoveToolStripMenuItem.Size = new System.Drawing.Size(330, 28);
+            this.editRemoveToolStripMenuItem.Text = "Edit/Remove";
+            // 
+            // manageStudentFormToolStripMenuItem
+            // 
+            this.manageStudentFormToolStripMenuItem.Name = "manageStudentFormToolStripMenuItem";
+            this.manageStudentFormToolStripMenuItem.Size = new System.Drawing.Size(330, 28);
+            this.manageStudentFormToolStripMenuItem.Text = "Manage student form";
+            // 
+            // printToolStripMenuItem
+            // 
+            this.printToolStripMenuItem.Name = "printToolStripMenuItem";
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(330, 28);
+            this.printToolStripMenuItem.Text = "Print";
             // 
             // courseToolStripMenuItem
             // 
@@ -103,6 +148,13 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // adminToolStripMenuItem
+            // 
+            this.adminToolStripMenuItem.Name = "adminToolStripMenuItem";
+            this.adminToolStripMenuItem.Size = new System.Drawing.Size(86, 27);
+            this.adminToolStripMenuItem.Text = "Admin";
+            this.adminToolStripMenuItem.Click += new System.EventHandler(this.adminToolStripMenuItem_Click);
+            // 
             // frmFunctionSelector
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -114,6 +166,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmFunctionSelector";
             this.Text = "Welcome";
+            this.Load += new System.EventHandler(this.frmFunctionSelector_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -131,5 +184,11 @@
         private System.Windows.Forms.ToolStripMenuItem resultToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem studentListToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem staToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editRemoveToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem manageStudentFormToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem printToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem birthMonthToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem adminToolStripMenuItem;
     }
 }

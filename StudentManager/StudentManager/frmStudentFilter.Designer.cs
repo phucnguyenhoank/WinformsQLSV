@@ -54,7 +54,7 @@
             // 
             this.radioBtnAddStudentGenderFemale.AutoSize = true;
             this.radioBtnAddStudentGenderFemale.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioBtnAddStudentGenderFemale.Location = new System.Drawing.Point(386, 472);
+            this.radioBtnAddStudentGenderFemale.Location = new System.Drawing.Point(349, 432);
             this.radioBtnAddStudentGenderFemale.Name = "radioBtnAddStudentGenderFemale";
             this.radioBtnAddStudentGenderFemale.Size = new System.Drawing.Size(85, 24);
             this.radioBtnAddStudentGenderFemale.TabIndex = 75;
@@ -65,7 +65,7 @@
             // 
             this.radioBtnStudentGenderFilter.AutoSize = true;
             this.radioBtnStudentGenderFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioBtnStudentGenderFilter.Location = new System.Drawing.Point(271, 472);
+            this.radioBtnStudentGenderFilter.Location = new System.Drawing.Point(234, 432);
             this.radioBtnStudentGenderFilter.Name = "radioBtnStudentGenderFilter";
             this.radioBtnStudentGenderFilter.Size = new System.Drawing.Size(66, 24);
             this.radioBtnStudentGenderFilter.TabIndex = 74;
@@ -75,7 +75,7 @@
             // txtStudentAddressFilter
             // 
             this.txtStudentAddressFilter.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStudentAddressFilter.Location = new System.Drawing.Point(250, 520);
+            this.txtStudentAddressFilter.Location = new System.Drawing.Point(213, 480);
             this.txtStudentAddressFilter.Multiline = true;
             this.txtStudentAddressFilter.Name = "txtStudentAddressFilter";
             this.txtStudentAddressFilter.Size = new System.Drawing.Size(377, 65);
@@ -86,7 +86,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Gray;
-            this.label8.Location = new System.Drawing.Point(113, 527);
+            this.label8.Location = new System.Drawing.Point(76, 487);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(99, 23);
             this.label8.TabIndex = 73;
@@ -97,7 +97,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Gray;
-            this.label7.Location = new System.Drawing.Point(113, 416);
+            this.label7.Location = new System.Drawing.Point(76, 376);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(104, 23);
             this.label7.TabIndex = 72;
@@ -106,7 +106,7 @@
             // dtpStudentBirthdayFilter
             // 
             this.dtpStudentBirthdayFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpStudentBirthdayFilter.Location = new System.Drawing.Point(250, 417);
+            this.dtpStudentBirthdayFilter.Location = new System.Drawing.Point(213, 377);
             this.dtpStudentBirthdayFilter.Name = "dtpStudentBirthdayFilter";
             this.dtpStudentBirthdayFilter.Size = new System.Drawing.Size(377, 27);
             this.dtpStudentBirthdayFilter.TabIndex = 71;
@@ -115,7 +115,7 @@
             // txtStudentPhoneNumberFilter
             // 
             this.txtStudentPhoneNumberFilter.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStudentPhoneNumberFilter.Location = new System.Drawing.Point(250, 362);
+            this.txtStudentPhoneNumberFilter.Location = new System.Drawing.Point(213, 322);
             this.txtStudentPhoneNumberFilter.Name = "txtStudentPhoneNumberFilter";
             this.txtStudentPhoneNumberFilter.Size = new System.Drawing.Size(377, 36);
             this.txtStudentPhoneNumberFilter.TabIndex = 60;
@@ -125,7 +125,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Gray;
-            this.label6.Location = new System.Drawing.Point(55, 362);
+            this.label6.Location = new System.Drawing.Point(18, 322);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(158, 23);
             this.label6.TabIndex = 70;
@@ -134,7 +134,7 @@
             // txtStudentLastNameFilter
             // 
             this.txtStudentLastNameFilter.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStudentLastNameFilter.Location = new System.Drawing.Point(250, 307);
+            this.txtStudentLastNameFilter.Location = new System.Drawing.Point(213, 267);
             this.txtStudentLastNameFilter.Name = "txtStudentLastNameFilter";
             this.txtStudentLastNameFilter.Size = new System.Drawing.Size(377, 36);
             this.txtStudentLastNameFilter.TabIndex = 59;
@@ -144,7 +144,7 @@
             this.lblStudentLastname.AutoSize = true;
             this.lblStudentLastname.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStudentLastname.ForeColor = System.Drawing.Color.Gray;
-            this.lblStudentLastname.Location = new System.Drawing.Point(96, 307);
+            this.lblStudentLastname.Location = new System.Drawing.Point(59, 267);
             this.lblStudentLastname.Name = "lblStudentLastname";
             this.lblStudentLastname.Size = new System.Drawing.Size(117, 23);
             this.lblStudentLastname.TabIndex = 69;
@@ -154,7 +154,7 @@
             // 
             this.lblNoticeLogin.AutoSize = true;
             this.lblNoticeLogin.Font = new System.Drawing.Font("Calibri Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNoticeLogin.Location = new System.Drawing.Point(185, 384);
+            this.lblNoticeLogin.Location = new System.Drawing.Point(148, 344);
             this.lblNoticeLogin.Name = "lblNoticeLogin";
             this.lblNoticeLogin.Size = new System.Drawing.Size(0, 21);
             this.lblNoticeLogin.TabIndex = 68;
@@ -166,7 +166,7 @@
             this.btnApplyFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnApplyFilter.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnApplyFilter.ForeColor = System.Drawing.Color.White;
-            this.btnApplyFilter.Location = new System.Drawing.Point(130, 606);
+            this.btnApplyFilter.Location = new System.Drawing.Point(93, 566);
             this.btnApplyFilter.Name = "btnApplyFilter";
             this.btnApplyFilter.Size = new System.Drawing.Size(145, 56);
             this.btnApplyFilter.TabIndex = 62;
@@ -182,7 +182,7 @@
             this.btnCancelStudentFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelStudentFilter.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelStudentFilter.ForeColor = System.Drawing.Color.White;
-            this.btnCancelStudentFilter.Location = new System.Drawing.Point(482, 606);
+            this.btnCancelStudentFilter.Location = new System.Drawing.Point(445, 566);
             this.btnCancelStudentFilter.Name = "btnCancelStudentFilter";
             this.btnCancelStudentFilter.Size = new System.Drawing.Size(145, 56);
             this.btnCancelStudentFilter.TabIndex = 63;
@@ -193,7 +193,7 @@
             // txtStudentFirstNameFilter
             // 
             this.txtStudentFirstNameFilter.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStudentFirstNameFilter.Location = new System.Drawing.Point(250, 247);
+            this.txtStudentFirstNameFilter.Location = new System.Drawing.Point(213, 207);
             this.txtStudentFirstNameFilter.Name = "txtStudentFirstNameFilter";
             this.txtStudentFirstNameFilter.Size = new System.Drawing.Size(377, 36);
             this.txtStudentFirstNameFilter.TabIndex = 58;
@@ -203,7 +203,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Gray;
-            this.label3.Location = new System.Drawing.Point(94, 247);
+            this.label3.Location = new System.Drawing.Point(57, 207);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(119, 23);
             this.label3.TabIndex = 64;
@@ -212,7 +212,7 @@
             // txtStudentIDFilter
             // 
             this.txtStudentIDFilter.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStudentIDFilter.Location = new System.Drawing.Point(250, 191);
+            this.txtStudentIDFilter.Location = new System.Drawing.Point(213, 151);
             this.txtStudentIDFilter.Name = "txtStudentIDFilter";
             this.txtStudentIDFilter.Size = new System.Drawing.Size(377, 36);
             this.txtStudentIDFilter.TabIndex = 57;
@@ -222,7 +222,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(94, 197);
+            this.label2.Location = new System.Drawing.Point(57, 157);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(118, 23);
             this.label2.TabIndex = 65;
@@ -233,18 +233,18 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
-            this.label1.Location = new System.Drawing.Point(114, 81);
+            this.label1.Location = new System.Drawing.Point(54, 48);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(513, 54);
+            this.label1.Size = new System.Drawing.Size(579, 54);
             this.label1.TabIndex = 66;
-            this.label1.Text = "Student Finding Filter";
+            this.label1.Text = "Student Searching Filter";
             // 
             // radioBtnBothGender
             // 
             this.radioBtnBothGender.AutoSize = true;
             this.radioBtnBothGender.Checked = true;
             this.radioBtnBothGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioBtnBothGender.Location = new System.Drawing.Point(502, 472);
+            this.radioBtnBothGender.Location = new System.Drawing.Point(465, 432);
             this.radioBtnBothGender.Name = "radioBtnBothGender";
             this.radioBtnBothGender.Size = new System.Drawing.Size(125, 24);
             this.radioBtnBothGender.TabIndex = 76;
@@ -257,7 +257,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Gray;
-            this.label4.Location = new System.Drawing.Point(119, 471);
+            this.label4.Location = new System.Drawing.Point(82, 431);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(90, 23);
             this.label4.TabIndex = 77;
@@ -269,7 +269,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(781, 781);
+            this.ClientSize = new System.Drawing.Size(705, 687);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.radioBtnBothGender);
             this.Controls.Add(this.radioBtnAddStudentGenderFemale);
@@ -292,7 +292,7 @@
             this.Controls.Add(this.label1);
             this.MaximizeBox = false;
             this.Name = "frmStudentFilter";
-            this.Text = "frmStudentFilter";
+            this.Text = "Student Searching Filter";
             this.ResumeLayout(false);
             this.PerformLayout();
 

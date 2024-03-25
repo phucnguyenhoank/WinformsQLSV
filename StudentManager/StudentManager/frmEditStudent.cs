@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace StudentManager
@@ -20,31 +22,31 @@ namespace StudentManager
             InitializeComponent();
         }
 
-        public TextBox TxtEditStudentID
+        public System.Windows.Forms.TextBox TxtEditStudentID
         {
             get { return this.txtEditStudentID; }
             set { this.txtEditStudentID = value; }
         }
 
-        public TextBox TxtEditStudentFirstName
+        public System.Windows.Forms.TextBox TxtEditStudentFirstName
         {
             get { return txtEditStudentFirstName; }
             set { txtEditStudentFirstName = value; }
         }
 
-        public TextBox TxtEditStudentLastName
+        public System.Windows.Forms.TextBox TxtEditStudentLastName
         {
             get { return txtEditStudentLastName; }
             set { txtEditStudentLastName = value; }
         }
 
-        public TextBox TxtEditStudentPhoneNumber
+        public System.Windows.Forms.TextBox TxtEditStudentPhoneNumber
         {
             get { return txtEditStudentPhoneNumber; }
             set { txtEditStudentPhoneNumber = value; }
         }
 
-        public TextBox TxtEditStudentAddress
+        public System.Windows.Forms.TextBox TxtEditStudentAddress
         {
             get { return txtEditStudentAddress; }
             set { txtEditStudentAddress = value; }
@@ -58,8 +60,8 @@ namespace StudentManager
 
         public System.Windows.Forms.RadioButton RadioBtnEditStudentGender
         {
-            get { return radioBtnEditStudentGender;}
-            set { radioBtnEditStudentGender = value; }
+            get { return rbtnEditStudentGenderMale;}
+            set { rbtnEditStudentGenderMale = value; }
         }
 
         public PictureBox PicboxEditStudentImage
@@ -73,16 +75,13 @@ namespace StudentManager
             Close();
         }
 
-        private void txtEditStudentID_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
+       
 
         private void btnFindStudent_Click(object sender, EventArgs e)
         {
             try
             {
-                DataTable dataTable = (new StudentDatabaseManager()).GetStudentDataTableByID(txtEditStudentID.Text);
+                DataTable dataTable = (new StudentBLL()).GetStudentDataTableByID(txtEditStudentID.Text);
 
                 DataRow row = dataTable.Rows[0];
                 TxtEditStudentID.Text = row.Field<string>("studentID");
@@ -90,7 +89,15 @@ namespace StudentManager
                 TxtEditStudentLastName.Text = row.Field<string>("last_name");
                 TxtEditStudentPhoneNumber.Text = row.Field<string>("phone_number");
                 DtpEditStudentBirthday.Value = row.Field<DateTime>("birth_day");
-                RadioBtnEditStudentGender.Checked = (row.Field<string>("gender") == "Male") ? true : false;
+                if (row.Field<string>("gender") == "Male")
+                {
+                    RadioBtnEditStudentGender.Checked = true;
+                }
+                else
+                {
+                    rbtnEditStudentGenderFemale.Checked = true;
+                }
+                // RadioBtnEditStudentGender.Checked = (row.Field<string>("gender") == "Male") ? true : false;
                 TxtEditStudentAddress.Text = row.Field<string>("std_address");
 
                 MemoryStream ms = new MemoryStream(row.Field<byte[]>("std_image"));
@@ -98,7 +105,7 @@ namespace StudentManager
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show($"btnFindStudent_Click:{ex.Message}");
             }
 
 
@@ -108,7 +115,7 @@ namespace StudentManager
         {
             try
             {
-                StudentDatabaseManager db = new StudentDatabaseManager();
+                StudentBLL db = new StudentBLL();
                 DialogResult dialog = MessageBox.Show("Do you really want to remove student who has student ID: " + txtEditStudentID.Text + "?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (dialog == DialogResult.Yes)
                 {
@@ -126,7 +133,7 @@ namespace StudentManager
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show($"btnRemoveStudent_Click:{ex.Message}");
             }
         }
 
@@ -142,14 +149,23 @@ namespace StudentManager
 
         private void frmEditStudent_Load(object sender, EventArgs e)
         {
-
+            rbtnEditStudentGenderMale.Checked = true;
         }
 
         private void btnEditStudent_Click(object sender, EventArgs e)
         {
+            if (!string.IsNullOrEmpty(errorProviderName.GetError(txtEditStudentFirstName)) ||
+                !string.IsNullOrEmpty(errorProviderName.GetError(txtEditStudentLastName)) ||
+                !string.IsNullOrEmpty(errorProviderName.GetError(txtEditStudentPhoneNumber)) ||
+                !string.IsNullOrEmpty(errorProviderName.GetError(txtEditStudentID))
+                )
+            {
+                MessageBox.Show("Please enter valid information");
+                return;
+            }
             try
             {
-                StudentDatabaseManager db = new StudentDatabaseManager();
+                StudentBLL db = new StudentBLL();
                 DialogResult dialog = MessageBox.Show("Do you really want to edit student who has student ID: " + txtEditStudentID.Text + "?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (dialog == DialogResult.Yes)
                 {
@@ -158,7 +174,7 @@ namespace StudentManager
                     string lastStudentName = txtEditStudentLastName.Text;
                     string phoneNumber = txtEditStudentPhoneNumber.Text;
                     DateTime studentBirthday = dtpEditStudentBirthday.Value.Date;
-                    string gender = (radioBtnEditStudentGender.Checked) ? "Male" : "Female";
+                    string gender = (rbtnEditStudentGenderMale.Checked) ? "Male" : "Female";
                     string address = txtEditStudentAddress.Text;
 
                     MemoryStream studentPicMemoryStream = new MemoryStream();
@@ -180,7 +196,7 @@ namespace StudentManager
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show($"[btnEditStudent_Click:{ex.Message}");
             }
         }
 
@@ -193,6 +209,56 @@ namespace StudentManager
                 picboxEditStudentImage.Image = Image.FromFile(opf.FileName);
             }
 
+        }
+
+        private void txtEditStudentFirstName_TextChanged(object sender, EventArgs e)
+        {
+            if (txtEditStudentFirstName.Text.Any(char.IsDigit))
+            {
+                errorProviderName.SetError(txtEditStudentFirstName, "first name contains digits");
+            }
+            else
+            {
+                errorProviderName.SetError(txtEditStudentFirstName, "");
+            }
+        }
+
+        private void txtEditStudentLastName_TextChanged(object sender, EventArgs e)
+        {
+            if (txtEditStudentLastName.Text.Any(char.IsDigit))
+            {
+                errorProviderName.SetError(txtEditStudentLastName, "last name contains digits");
+            }
+            else
+            {
+                errorProviderName.SetError(txtEditStudentLastName, "");
+            }
+        }
+
+        private void txtEditStudentPhoneNumber_TextChanged(object sender, EventArgs e)
+        {
+            if (!int.TryParse(txtEditStudentPhoneNumber.Text, out _))
+            {
+                errorProviderName.SetError(txtEditStudentPhoneNumber, "cannot be phone number, being empty or contains letters");
+            }
+            else
+            {
+                errorProviderName.SetError(txtEditStudentPhoneNumber, "");
+            }
+        }
+
+        private void txtEditStudentID_TextChanged(object sender, EventArgs e)
+        {
+            // txtEditStudentID
+            StudentBLL db = new StudentBLL();
+            if (!db.HaveStudent(txtEditStudentID.Text))
+            {
+                errorProviderName.SetError(txtEditStudentID, "no exist student");
+            }
+            else
+            {
+                errorProviderName.SetError(txtEditStudentID, "");
+            }
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StudentManager
 {
-    internal class Student
+    public class Student
     {
         private string id, firstName, lastName, phoneNumber, address;
         DateTime birthDay;
@@ -15,16 +15,17 @@ namespace StudentManager
 
         public Student() { }
 
-        public Student(string id, string firstName,  string lastName, string phoneNumber, DateTime birthDay, string gender,  string address, byte[] imageData)
+        // Hàm khởi tạo với các tham số tùy chọn
+        public Student(string id = "", string firstName = "", string lastName = "", string phoneNumber = "", DateTime? birthDay = null, string gender = "", string address = "", byte[] imageData = null)
         {
-            this.id = id;
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.birthDay = birthDay;
-            this.gender = gender;
-            this.phoneNumber = phoneNumber;
-            this.address = address;
-            this.imageData = imageData;
+            Id = id;
+            FirstName = firstName;
+            LastName = lastName;
+            PhoneNumber = phoneNumber;
+            BirthDay = birthDay ?? DateTime.MinValue; // Giá trị mặc định cho birthDay là DateTime.MinValue nếu không được truyền vào
+            Gender = gender;
+            Address = address;
+            ImageData = imageData;
         }
 
         public string Id { get { return id; } set { id = value; } }

@@ -39,16 +39,16 @@
             this.gridColStudentImage = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnResetStudentList = new System.Windows.Forms.Button();
             this.btnFilter = new System.Windows.Forms.Button();
+            this.btnImport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGirdViewStudentList)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGirdViewStudentList
             // 
             this.dataGirdViewStudentList.AllowUserToAddRows = false;
-            this.dataGirdViewStudentList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGirdViewStudentList.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGirdViewStudentList.AllowUserToResizeRows = false;
+            this.dataGirdViewStudentList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGirdViewStudentList.ColumnHeadersHeight = 25;
-            this.dataGirdViewStudentList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGirdViewStudentList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.gridColStudentID,
             this.gridColFirstName,
@@ -58,14 +58,15 @@
             this.gridColGender,
             this.gridColAddress,
             this.gridColStudentImage});
-            this.dataGirdViewStudentList.Location = new System.Drawing.Point(62, 52);
+            this.dataGirdViewStudentList.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dataGirdViewStudentList.Location = new System.Drawing.Point(0, 0);
             this.dataGirdViewStudentList.Name = "dataGirdViewStudentList";
             this.dataGirdViewStudentList.ReadOnly = true;
             this.dataGirdViewStudentList.RowHeadersVisible = false;
             this.dataGirdViewStudentList.RowHeadersWidth = 51;
             this.dataGirdViewStudentList.RowTemplate.Height = 50;
             this.dataGirdViewStudentList.RowTemplate.ReadOnly = true;
-            this.dataGirdViewStudentList.Size = new System.Drawing.Size(1420, 568);
+            this.dataGirdViewStudentList.Size = new System.Drawing.Size(853, 566);
             this.dataGirdViewStudentList.TabIndex = 0;
             this.dataGirdViewStudentList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGirdViewStudentList_CellContentClick);
             this.dataGirdViewStudentList.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGirdViewStudentList_CellContentDoubleClick);
@@ -78,6 +79,7 @@
             this.gridColStudentID.MinimumWidth = 6;
             this.gridColStudentID.Name = "gridColStudentID";
             this.gridColStudentID.ReadOnly = true;
+            this.gridColStudentID.Width = 74;
             // 
             // gridColFirstName
             // 
@@ -86,6 +88,7 @@
             this.gridColFirstName.MinimumWidth = 6;
             this.gridColFirstName.Name = "gridColFirstName";
             this.gridColFirstName.ReadOnly = true;
+            this.gridColFirstName.Width = 60;
             // 
             // gridColLastName
             // 
@@ -94,6 +97,7 @@
             this.gridColLastName.MinimumWidth = 6;
             this.gridColLastName.Name = "gridColLastName";
             this.gridColLastName.ReadOnly = true;
+            this.gridColLastName.Width = 54;
             // 
             // gridColPhoneNumber
             // 
@@ -102,6 +106,7 @@
             this.gridColPhoneNumber.MinimumWidth = 6;
             this.gridColPhoneNumber.Name = "gridColPhoneNumber";
             this.gridColPhoneNumber.ReadOnly = true;
+            this.gridColPhoneNumber.Width = 114;
             // 
             // gridColBirthday
             // 
@@ -110,6 +115,7 @@
             this.gridColBirthday.MinimumWidth = 6;
             this.gridColBirthday.Name = "gridColBirthday";
             this.gridColBirthday.ReadOnly = true;
+            this.gridColBirthday.Width = 96;
             // 
             // gridColGender
             // 
@@ -118,6 +124,7 @@
             this.gridColGender.MinimumWidth = 6;
             this.gridColGender.Name = "gridColGender";
             this.gridColGender.ReadOnly = true;
+            this.gridColGender.Width = 83;
             // 
             // gridColAddress
             // 
@@ -126,6 +133,7 @@
             this.gridColAddress.MinimumWidth = 6;
             this.gridColAddress.Name = "gridColAddress";
             this.gridColAddress.ReadOnly = true;
+            this.gridColAddress.Width = 76;
             // 
             // gridColStudentImage
             // 
@@ -134,6 +142,7 @@
             this.gridColStudentImage.MinimumWidth = 6;
             this.gridColStudentImage.Name = "gridColStudentImage";
             this.gridColStudentImage.ReadOnly = true;
+            this.gridColStudentImage.Width = 59;
             // 
             // btnResetStudentList
             // 
@@ -142,9 +151,9 @@
             this.btnResetStudentList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnResetStudentList.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnResetStudentList.ForeColor = System.Drawing.Color.White;
-            this.btnResetStudentList.Location = new System.Drawing.Point(550, 663);
+            this.btnResetStudentList.Location = new System.Drawing.Point(550, 572);
             this.btnResetStudentList.Name = "btnResetStudentList";
-            this.btnResetStudentList.Size = new System.Drawing.Size(145, 56);
+            this.btnResetStudentList.Size = new System.Drawing.Size(93, 39);
             this.btnResetStudentList.TabIndex = 7;
             this.btnResetStudentList.Text = "Reset";
             this.btnResetStudentList.UseVisualStyleBackColor = false;
@@ -157,22 +166,39 @@
             this.btnFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFilter.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFilter.ForeColor = System.Drawing.Color.White;
-            this.btnFilter.Location = new System.Drawing.Point(778, 663);
+            this.btnFilter.Location = new System.Drawing.Point(649, 572);
             this.btnFilter.Name = "btnFilter";
-            this.btnFilter.Size = new System.Drawing.Size(145, 56);
+            this.btnFilter.Size = new System.Drawing.Size(93, 39);
             this.btnFilter.TabIndex = 8;
             this.btnFilter.Text = "Filter";
             this.btnFilter.UseVisualStyleBackColor = false;
             this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
             // 
+            // btnImport
+            // 
+            this.btnImport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
+            this.btnImport.FlatAppearance.BorderSize = 0;
+            this.btnImport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImport.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImport.ForeColor = System.Drawing.Color.White;
+            this.btnImport.Location = new System.Drawing.Point(748, 572);
+            this.btnImport.Name = "btnImport";
+            this.btnImport.Size = new System.Drawing.Size(93, 39);
+            this.btnImport.TabIndex = 9;
+            this.btnImport.Text = "Import";
+            this.btnImport.UseVisualStyleBackColor = false;
+            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
+            // 
             // frmStudentList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1591, 753);
+            this.ClientSize = new System.Drawing.Size(853, 629);
+            this.Controls.Add(this.btnImport);
             this.Controls.Add(this.btnFilter);
             this.Controls.Add(this.btnResetStudentList);
             this.Controls.Add(this.dataGirdViewStudentList);
+            this.MaximizeBox = false;
             this.Name = "frmStudentList";
             this.Text = "Student List";
             this.Load += new System.EventHandler(this.frmStudentList_Load);
@@ -194,5 +220,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn gridColAddress;
         private System.Windows.Forms.DataGridViewTextBoxColumn gridColStudentImage;
         private System.Windows.Forms.Button btnFilter;
+        private System.Windows.Forms.Button btnImport;
     }
 }

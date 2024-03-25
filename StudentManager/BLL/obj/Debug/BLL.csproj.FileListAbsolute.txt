@@ -1,0 +1,13 @@
+E:\hello_csharp\Day2_Again\StudentManager\BLL\bin\Debug\BLL.dll
+E:\hello_csharp\Day2_Again\StudentManager\BLL\bin\Debug\BLL.pdb
+E:\hello_csharp\Day2_Again\StudentManager\BLL\bin\Debug\BCrypt.Net.dll
+E:\hello_csharp\Day2_Again\StudentManager\BLL\bin\Debug\DAL.dll
+E:\hello_csharp\Day2_Again\StudentManager\BLL\bin\Debug\DTO.dll
+E:\hello_csharp\Day2_Again\StudentManager\BLL\bin\Debug\DAL.pdb
+E:\hello_csharp\Day2_Again\StudentManager\BLL\bin\Debug\DTO.pdb
+E:\hello_csharp\Day2_Again\StudentManager\BLL\bin\Debug\BCrypt.Net.xml
+E:\hello_csharp\Day2_Again\StudentManager\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+E:\hello_csharp\Day2_Again\StudentManager\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+E:\hello_csharp\Day2_Again\StudentManager\BLL\obj\Debug\BLL.csproj.CopyComplete
+E:\hello_csharp\Day2_Again\StudentManager\BLL\obj\Debug\BLL.dll
+E:\hello_csharp\Day2_Again\StudentManager\BLL\obj\Debug\BLL.pdb
